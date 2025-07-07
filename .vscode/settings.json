@@ -11,6 +11,20 @@
         "function_call.h": "c",
         "var_dec.h": "c",
         "create_ast.h": "c",
-        "token_to_string.h": "c"
+        "token_to_string.h": "c",
+        "array": "c",
+        "charconv": "c",
+        "compare": "c",
+        "complex": "c",
+        "functional": "c",
+        "ratio": "c",
+        "tuple": "c",
+        "type_traits": "c",
+        "utility": "c",
+        "variant": "c",
+        "eval_exp.h": "c",
+        "string.h": "c",
+        "stdio.h": "c",
+        "symb_table.h": "c"
     }
 }

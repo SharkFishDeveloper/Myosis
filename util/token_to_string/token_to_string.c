@@ -28,17 +28,17 @@ const char *tokenTypeToStringVerbose(Token token) {
         case TOKEN_BIN_OP:
             switch (token.int_val) {
                 case BIN_PLUS:
-                    return "TOKEN_BIN_OP_PLUS";
+                    return "OP_PLUS";
                 case BIN_MINUS:
-                    return "TOKEN_BIN_OP_MINUS";
+                    return "OP_MINUS";
                 case BIN_MULTIPLY:
-                    return "TOKEN_BIN_OP_MULTIPLY";
+                    return "OP_MULTIPLY";
                 case BIN_DIVIDE:
-                    return "TOKEN_BIN_OP_DIVIDE";
+                    return "OP_DIVIDE";
                 case BIN_MODULO:
-                    return "TOKEN_BIN_OP_MODULO";
+                    return "OP_MODULO";
                 default:
-                    return "TOKEN_BIN_OP_UNKNOWN";
+                    return "OP_UNKNOWN";
             }
         default:
             return "UNKNOWN";

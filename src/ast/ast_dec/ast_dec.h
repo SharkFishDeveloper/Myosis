@@ -2,6 +2,7 @@
 #define DECLARATION_H
 #include "../function_call/function_call.h" 
 #include "../var_dec/var_dec.h"
+#include "symb_table/symb_table.h"
 
 typedef enum {
     AST_VAR_DECLARATION,
@@ -21,6 +22,7 @@ typedef struct AST_TREE_NODE
 
 typedef struct {
     AST_TREE_NODE *head;
+    SymbolTable symbolTable;
 } AST_TREE;
 
 #endif

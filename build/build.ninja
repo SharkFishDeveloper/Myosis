@@ -76,6 +76,24 @@ build CMakeFiles/main.dir/src/ast/function_call/function_call.c.obj: C_COMPILER_
   TARGET_COMPILE_PDB = CMakeFiles\main.dir\
   TARGET_PDB = main.pdb
 
+build CMakeFiles/main.dir/src/eval_exp/eval_exp.c.obj: C_COMPILER__main_unscanned_Debug C$:/Users/shahz/OneDrive/Desktop/side-prog/myosis/src/eval_exp/eval_exp.c || cmake_object_order_depends_target_main
+  DEP_FILE = CMakeFiles\main.dir\src\eval_exp\eval_exp.c.obj.d
+  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu11
+  INCLUDES = -IC:/Users/shahz/OneDrive/Desktop/side-prog/myosis/src -IC:/Users/shahz/OneDrive/Desktop/side-prog/myosis/util
+  OBJECT_DIR = CMakeFiles\main.dir
+  OBJECT_FILE_DIR = CMakeFiles\main.dir\src\eval_exp
+  TARGET_COMPILE_PDB = CMakeFiles\main.dir\
+  TARGET_PDB = main.pdb
+
+build CMakeFiles/main.dir/src/symb_table/symb_table.c.obj: C_COMPILER__main_unscanned_Debug C$:/Users/shahz/OneDrive/Desktop/side-prog/myosis/src/symb_table/symb_table.c || cmake_object_order_depends_target_main
+  DEP_FILE = CMakeFiles\main.dir\src\symb_table\symb_table.c.obj.d
+  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu11
+  INCLUDES = -IC:/Users/shahz/OneDrive/Desktop/side-prog/myosis/src -IC:/Users/shahz/OneDrive/Desktop/side-prog/myosis/util
+  OBJECT_DIR = CMakeFiles\main.dir
+  OBJECT_FILE_DIR = CMakeFiles\main.dir\src\symb_table
+  TARGET_COMPILE_PDB = CMakeFiles\main.dir\
+  TARGET_PDB = main.pdb
+
 build CMakeFiles/main.dir/src/tokenise/tokenise.c.obj: C_COMPILER__main_unscanned_Debug C$:/Users/shahz/OneDrive/Desktop/side-prog/myosis/src/tokenise/tokenise.c || cmake_object_order_depends_target_main
   DEP_FILE = CMakeFiles\main.dir\src\tokenise\tokenise.c.obj.d
   FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu11
@@ -111,7 +129,7 @@ build CMakeFiles/main.dir/util/token_to_string/token_to_string.c.obj: C_COMPILER
 #############################################
 # Link the executable main.exe
 
-build main.exe: C_EXECUTABLE_LINKER__main_Debug CMakeFiles/main.dir/index.c.obj CMakeFiles/main.dir/src/ast/create_ast/create_ast.c.obj CMakeFiles/main.dir/src/ast/function_call/function_call.c.obj CMakeFiles/main.dir/src/tokenise/tokenise.c.obj CMakeFiles/main.dir/src/tokens/token_type.c.obj CMakeFiles/main.dir/util/token_to_string/token_to_string.c.obj
+build main.exe: C_EXECUTABLE_LINKER__main_Debug CMakeFiles/main.dir/index.c.obj CMakeFiles/main.dir/src/ast/create_ast/create_ast.c.obj CMakeFiles/main.dir/src/ast/function_call/function_call.c.obj CMakeFiles/main.dir/src/eval_exp/eval_exp.c.obj CMakeFiles/main.dir/src/symb_table/symb_table.c.obj CMakeFiles/main.dir/src/tokenise/tokenise.c.obj CMakeFiles/main.dir/src/tokens/token_type.c.obj CMakeFiles/main.dir/util/token_to_string/token_to_string.c.obj
   FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
   LINK_FLAGS = -Xlinker /subsystem:console  -fuse-ld=lld-link
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames

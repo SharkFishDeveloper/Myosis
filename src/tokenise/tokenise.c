@@ -23,10 +23,16 @@ void tokenise(char *fileContent, Token **outList, int *outCount) {
     while (fileContent[i] != '\0') {
         if (fileContent[i] == '"') {
             i++;  // skip opening quote
+            int start = i;
             bufferIndex = 0;
             while (fileContent[i] != '"' && fileContent[i] != '\0') {
                 buffer[bufferIndex++] = fileContent[i++];
             }
+            if (fileContent[i] == '\0') {
+            fprintf(stderr, "Error: Unterminated string literal starting at index %d\n", start - 1);
+            free(tokenList); // clean up memory
+            exit(1);  // exit with error
+        }
             buffer[bufferIndex] = '\0';
             Token token;
             token.type = STRING_LITERAL;
