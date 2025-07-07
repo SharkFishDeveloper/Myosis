@@ -5,6 +5,12 @@
         "cstddef": "cpp",
         "tokenise.h": "c",
         "stdlib.h": "c",
-        "cctype": "c"
+        "cctype": "c",
+        "ast_dec.h": "c",
+        "declaration.h": "c",
+        "function_call.h": "c",
+        "var_dec.h": "c",
+        "create_ast.h": "c",
+        "token_to_string.h": "c"
     }
 }

@@ -11,12 +11,14 @@ set(CMAKE_C_STANDARD_REQUIRED True)
 # Collect all .c files in the functions directory and its subdirectories
 file(GLOB_RECURSE SOURCES
     ${PROJECT_SOURCE_DIR}/src/**/*.c
+    ${PROJECT_SOURCE_DIR}/util/**/*.c
     ${PROJECT_SOURCE_DIR}/index.c
-)
-
-# Collect all .h files in the functions directory and its subdirectories
-file(GLOB_RECURSE HEADERS
+    )
+    
+    # Collect all .h files in the functions directory and its subdirectories
+    file(GLOB_RECURSE HEADERS
     ${PROJECT_SOURCE_DIR}/src/**/*.h
+    ${PROJECT_SOURCE_DIR}/util/**/*.h
 )
 
 # Add executable target
@@ -24,6 +26,7 @@ add_executable(${PROJECT_NAME} ${SOURCES})
 
 target_include_directories(${PROJECT_NAME} PRIVATE
     ${PROJECT_SOURCE_DIR}/src
+    ${PROJECT_SOURCE_DIR}/util
 )
 
 # Optionally add compiler flags for warnings and debugging
