@@ -42,9 +42,11 @@ void tokenise(char *fileContent, Token **outList, int *outCount) {
             i++;
         }
         else if (fileContent[i] == ' ' || fileContent[i] == '\n' ||
-                 fileContent[i] == ';' || fileContent[i] == '=' ||
-                 fileContent[i] == '(' || fileContent[i] == ')' ||
-                 fileContent[i] == '{' || fileContent[i] == '}') {
+         fileContent[i] == ';' || fileContent[i] == '=' ||
+         fileContent[i] == '(' || fileContent[i] == ')' ||
+         fileContent[i] == '{' || fileContent[i] == '}' ||fileContent[i] == '+' || fileContent[i] == '-' || fileContent[i] == '*' ||
+         fileContent[i] == '/' || fileContent[i] == '%')
+        {
 
             if (bufferIndex > 0) {
                 buffer[bufferIndex] = '\0';
@@ -104,6 +106,41 @@ void tokenise(char *fileContent, Token **outList, int *outCount) {
                 Token token;
                 token.type = CLOSE_CURLY_PAR;
                 token.name = strdup("}");
+                tokenList[tokenCount++] = token;
+            }
+            else if (fileContent[i] == '+') {
+                Token token;
+                token.type = TOKEN_BIN_OP;
+                token.name = strdup("+");
+                token.int_val = BIN_PLUS;
+                tokenList[tokenCount++] = token;
+            }
+            else if (fileContent[i] == '-') {
+                Token token;
+                token.type = TOKEN_BIN_OP;
+                token.name = strdup("-");
+                token.int_val = BIN_MINUS;
+                tokenList[tokenCount++] = token;
+            }
+            else if (fileContent[i] == '*') {
+                Token token;
+                token.type = TOKEN_BIN_OP;
+                token.name = strdup("*");
+                token.int_val = BIN_MULTIPLY;
+                tokenList[tokenCount++] = token;
+            }
+            else if (fileContent[i] == '/') {
+                Token token;
+                token.type = TOKEN_BIN_OP;
+                token.name = strdup("/");
+                token.int_val = BIN_DIVIDE;
+                tokenList[tokenCount++] = token;
+            }
+            else if (fileContent[i] == '%') {
+                Token token;
+                token.type = TOKEN_BIN_OP;
+                token.name = strdup("%");
+                token.int_val = BIN_MODULO;
                 tokenList[tokenCount++] = token;
             }
             i++;
