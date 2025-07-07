@@ -1,0 +1,3 @@
+C:/Users/shahz/OneDrive/Desktop/side-prog/myosis/build/CMakeFiles/main.dir
+C:/Users/shahz/OneDrive/Desktop/side-prog/myosis/build/CMakeFiles/edit_cache.dir
+C:/Users/shahz/OneDrive/Desktop/side-prog/myosis/build/CMakeFiles/rebuild_cache.dir

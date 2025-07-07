@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "*.css": "css",
+        "token_type.h": "c",
+        "cstddef": "cpp",
+        "tokenise.h": "c",
+        "stdlib.h": "c",
+        "cctype": "c"
+    }
+}
